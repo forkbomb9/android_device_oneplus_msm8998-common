@@ -148,6 +148,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
+# Device Settings
+PRODUCT_PACKAGES += \
+    DeviceSettings
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl:64 \
@@ -240,6 +244,7 @@ PRODUCT_PACKAGES += \
     init.devstart.sh \
     init.qcom.rc \
     init.qcom.usb.rc \
+    init.target.displaymodes.rc \
     init.radio.sh \
     ueventd.qcom.rc
 
