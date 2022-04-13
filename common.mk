@@ -147,6 +147,10 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     vendor.qti.hardware.camera.device@1.0
 
+# Device Settings
+PRODUCT_PACKAGES += \
+    DeviceSettings
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl:64 \
@@ -227,6 +231,7 @@ PRODUCT_PACKAGES += \
     init.devstart.sh \
     init.qcom.rc \
     init.qcom.usb.rc \
+    init.target.displaymodes.rc \
     init.radio.sh \
     ueventd.qcom.rc
 
