@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.yaap.device.DeviceSettings;
+package com.dot.device.DeviceSettings;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;

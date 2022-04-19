@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.yaap.device.DeviceSettings;
+package com.dot.device.DeviceSettings;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -26,7 +26,7 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import androidx.preference.PreferenceManager;
 
-import com.yaap.device.DeviceSettings.ModeSwitch.*;
+import com.dot.device.DeviceSettings.ModeSwitch.*;
 
 public class Startup extends BroadcastReceiver {
 

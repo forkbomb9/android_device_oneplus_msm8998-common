@@ -26,8 +26,8 @@
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
-        <item>com.yaap.device.DeviceSettings.KeyHandler</item>
-        <item>com.yaap.device.DeviceSettings.TouchKeyHandler</item>
+        <item>com.dot.device.DeviceSettings.KeyHandler</item>
+        <item>com.dot.device.DeviceSettings.TouchKeyHandler</item>
     </string-array>
 
     <!-- Hardware keys present on the device with the ability to wake, stored as a bit field.
