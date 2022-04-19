@@ -3,6 +3,6 @@
     public <init>(android.content.Context);
 }
 
--keep class com.yaap.device.DeviceSettings.* {
+-keep class com.dot.device.DeviceSettings.* {
   *;
 }

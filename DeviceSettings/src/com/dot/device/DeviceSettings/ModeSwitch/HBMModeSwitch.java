@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2017 The OmniROM Project
+* Copyright (C) 2016 The OmniROM Project
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -15,21 +15,26 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.yaap.device.DeviceSettings;
+package com.dot.device.DeviceSettings.ModeSwitch;
 
-import android.os.Bundle;
+import com.dot.device.DeviceSettings.Utils;
 
-import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.android.settingslib.collapsingtoolbar.R;
+public class HBMModeSwitch {
 
-public class DeviceSettingsActivity extends CollapsingToolbarBaseActivity {
+    private static final String FILE = "/sys/devices/virtual/graphics/fb0/hbm";
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public static String getFile() {
+        if (Utils.fileWritable(FILE)) {
+            return FILE;
+        }
+        return null;
+    }
 
-        getFragmentManager().beginTransaction()
-                .add(R.id.content_frame, new DeviceSettings())
-                .commit();
+    public static boolean isSupported() {
+        return Utils.fileWritable(getFile());
+    }
+
+    public static boolean isCurrentlyEnabled() {
+        return Utils.getFileValueAsBoolean(getFile(), false);
     }
 }
