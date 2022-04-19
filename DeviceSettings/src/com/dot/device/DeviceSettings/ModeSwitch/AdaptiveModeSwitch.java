@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2016 The OmniROM Project
+* Copyright (C) 2018 The OmniROM Project
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -15,16 +15,16 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.yaap.device.DeviceSettings.ModeSwitch;
+package com.dot.device.DeviceSettings.ModeSwitch;
 
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 
-import com.yaap.device.DeviceSettings.Utils;
+import com.dot.device.DeviceSettings.Utils;
 
-public class SRGBModeSwitch implements OnPreferenceChangeListener {
+public class AdaptiveModeSwitch implements OnPreferenceChangeListener {
 
-    private static final String FILE = "/sys/devices/virtual/graphics/fb0/SRGB";
+    private static final String FILE = "/sys/devices/virtual/graphics/fb0/adaption_mode";
 
     public static String getFile() {
         if (Utils.fileWritable(FILE)) {
