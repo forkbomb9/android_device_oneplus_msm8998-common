@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.yaap.device.DeviceSettings;
+package com.dot.device.DeviceSettings;
 
 import android.content.SharedPreferences;
 import android.hardware.display.ColorDisplayManager;
@@ -35,7 +35,7 @@ import androidx.preference.PreferenceManager;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import com.yaap.device.DeviceSettings.ModeSwitch.*;
+import com.dot.device.DeviceSettings.ModeSwitch.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;

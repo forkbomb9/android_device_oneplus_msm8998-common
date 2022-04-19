@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.yaap.device.DeviceSettings;
+package com.dot.device.DeviceSettings;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -32,8 +32,8 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 import androidx.preference.TwoStatePreference;
 
-import com.yaap.device.DeviceSettings.ModeSwitch.DCModeSwitch;
-import com.yaap.device.DeviceSettings.ModeSwitch.HBMModeSwitch;
+import com.dot.device.DeviceSettings.ModeSwitch.DCModeSwitch;
+import com.dot.device.DeviceSettings.ModeSwitch.HBMModeSwitch;
 
 public class DeviceSettings extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -107,7 +107,7 @@ public class DeviceSettings extends PreferenceFragment
             Boolean enabled = (Boolean) newValue;
             Utils.writeValue(HBMModeSwitch.getFile(), enabled ? "5" : "0");
             Intent hbmIntent = new Intent(getContext(),
-                    com.yaap.device.DeviceSettings.HBMModeService.class);
+                    com.dot.device.DeviceSettings.HBMModeService.class);
             if (enabled) {
                 getContext().startService(hbmIntent);
             } else {
