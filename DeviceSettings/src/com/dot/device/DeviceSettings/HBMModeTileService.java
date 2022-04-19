@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.yaap.device.DeviceSettings;
+package com.dot.device.DeviceSettings;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -26,7 +26,7 @@ import androidx.preference.PreferenceManager;
 
 import java.lang.IllegalArgumentException;
 
-import com.yaap.device.DeviceSettings.ModeSwitch.HBMModeSwitch;
+import com.dot.device.DeviceSettings.ModeSwitch.HBMModeSwitch;
 
 public class HBMModeTileService extends TileService {
 
@@ -67,7 +67,7 @@ public class HBMModeTileService extends TileService {
         Utils.writeValue(HBMModeSwitch.getFile(), enabled ? "0" : "5");
         if (!enabled) {
             mHbmIntent = new Intent(this,
-                    com.yaap.device.DeviceSettings.HBMModeService.class);
+                    com.dot.device.DeviceSettings.HBMModeService.class);
             this.startService(mHbmIntent);
         }
         updateState();
