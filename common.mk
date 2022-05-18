@@ -38,7 +38,7 @@ TARGET_SUPPORTS_BLUR := true
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-dot
+    $(LOCAL_PATH)/overlay-posp
 
 PRODUCT_ENFORCE_RRO_TARGETS += *
 
