@@ -51,12 +51,6 @@ vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib/rfsa/adsp/libvpp_frc.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
-# Alipay
-priv-app/IFAAService/IFAAService.apk
-vendor/bin/hw/vendor.oneplus.hardware.ifaa@2.0-service
-vendor/etc/init/vendor.oneplus.hardware.ifaa@2.0-service.rc
-vendor/lib64/vendor.oneplus.hardware.ifaa@2.0.so
-
 # ANT+ - from jasmine V11.0.15.0.QDIMIXM
 -lib/libantradio.so:system_ext/lib/libantradio.so|37c36369eeab19d5e6266d9d25ae0de9bb59502d
 -lib64/libantradio.so:system_ext/lib64/libantradio.so|43f6105678c082216f1606d8dd43fa1b0b753d7e
