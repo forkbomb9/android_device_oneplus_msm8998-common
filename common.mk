@@ -95,6 +95,10 @@ PRODUCT_COPY_FILES += \
 # Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
+# GCam GO
+PRODUCT_PACKAGES += \
+    GCamGOPrebuilt-V2
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService
