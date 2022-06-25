@@ -169,9 +169,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/FOSSConfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/FOSSConfig.xml
 
-# Doze
-PRODUCT_PACKAGES += \
-    OnePlusDoze
+# # Doze
+# PRODUCT_PACKAGES += \
+#     OnePlusDoze
 
 # DRM
 PRODUCT_PACKAGES += \
