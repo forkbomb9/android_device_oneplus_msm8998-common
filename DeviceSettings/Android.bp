@@ -32,6 +32,7 @@ android_app {
         "androidx.core_core",
         "androidx.preference_preference",
         "org.lineageos.settings.resources",
+        "org.lineageos.platform.internal"
     ],
 
     resource_dirs: ["res"],
