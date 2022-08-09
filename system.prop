@@ -68,3 +68,6 @@ wifi.interface=wlan0
 ro.surface_flinger.supports_background_blur=1
 ro.sf.blurs_are_expensive=0
 persist.sysui.disableBlur=false
+
+# Spark maintainer
+ro.spark.maintainer=forkbomb9
