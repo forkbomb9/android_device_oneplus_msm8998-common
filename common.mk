@@ -25,6 +25,11 @@
 $(call inherit-product, vendor/oneplus/msm8998-common/msm8998-common-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 
+ifeq ($(WITH_GAPPS), true)
+    # Get non-open-source specific aspects for Ok Google
+    $(call inherit-product, vendor/oneplus/google/google.mk)
+endif
+
 # APEX
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 PRODUCT_COMPRESSED_APEX := false
