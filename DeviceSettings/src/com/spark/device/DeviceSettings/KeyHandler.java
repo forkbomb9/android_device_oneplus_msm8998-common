@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.dot.device.DeviceSettings;
+package com.spark.device.DeviceSettings;
 
 import android.app.NotificationManager;
 import android.app.Service;
@@ -34,8 +34,8 @@ import android.provider.Settings;
 import android.util.Log;
 import androidx.preference.PreferenceManager;
 
-import com.dot.device.DeviceSettings.Constants;
-import com.dot.device.DeviceSettings.DeviceSettings;
+import com.spark.device.DeviceSettings.Constants;
+import com.spark.device.DeviceSettings.DeviceSettings;
 
 public class KeyHandler extends Service {
     private AudioManager mAudioManager;

@@ -3,6 +3,6 @@
     public <init>(android.content.Context);
 }
 
--keep class com.dot.device.DeviceSettings.* {
+-keep class com.spark.device.DeviceSettings.* {
   *;
 }

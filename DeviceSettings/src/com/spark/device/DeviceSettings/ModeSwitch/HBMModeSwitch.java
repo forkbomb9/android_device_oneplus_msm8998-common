@@ -15,16 +15,13 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.dot.device.DeviceSettings.ModeSwitch;
+package com.spark.device.DeviceSettings.ModeSwitch;
 
-import androidx.preference.Preference;
-import androidx.preference.Preference.OnPreferenceChangeListener;
+import com.spark.device.DeviceSettings.Utils;
 
-import com.dot.device.DeviceSettings.Utils;
+public class HBMModeSwitch {
 
-public class DCModeSwitch implements OnPreferenceChangeListener {
-
-    private static final String FILE = "/proc/flicker_free/flicker_free";
+    private static final String FILE = "/sys/devices/virtual/graphics/fb0/hbm";
 
     public static String getFile() {
         if (Utils.fileWritable(FILE)) {
@@ -39,12 +36,5 @@ public class DCModeSwitch implements OnPreferenceChangeListener {
 
     public static boolean isCurrentlyEnabled() {
         return Utils.getFileValueAsBoolean(getFile(), false);
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        Boolean enabled = (Boolean) newValue;
-        Utils.writeValue(getFile(), enabled ? "1" : "0");
-        return true;
     }
 }

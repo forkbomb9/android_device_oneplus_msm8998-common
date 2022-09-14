@@ -15,7 +15,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           android:sharedUserId="android.uid.system"
-          package="com.dot.device.DeviceSettings"
+          package="com.spark.device.DeviceSettings"
           android:versionCode="1"
           android:versionName="1.0" >
 
@@ -29,7 +29,7 @@
         android:name="com.android.touch.gestures.TRIGGER_SCREEN_OFF_GESTURE"
         android:protectionLevel="signatureOrSystem" />
 
-    <protected-broadcast android:name="com.dot.device.DeviceSettings.UPDATE_SETTINGS" />
+    <protected-broadcast android:name="com.spark.device.DeviceSettings.UPDATE_SETTINGS" />
 
     <uses-sdk
         android:minSdkVersion="28"
@@ -63,7 +63,7 @@
         <activity android:name=".DeviceSettings" />
 
         <activity
-            android:name="com.dot.device.DeviceSettings.PanelSettingsActivity"
+            android:name="com.spark.device.DeviceSettings.PanelSettingsActivity"
             android:exported="true"
             android:label="@string/panel_category_title"
             android:launchMode="singleTask"
@@ -82,13 +82,13 @@
 
         <activity
             android:name=".ScreenOffLaunchGestureActivity"
-            android:permission="com.dot.device.DeviceSettings.TRIGGER_SCREEN_OFF_GESTURE"
+            android:permission="com.spark.device.DeviceSettings.TRIGGER_SCREEN_OFF_GESTURE"
             android:excludeFromRecents="true"
             android:exported="true"
             android:label="@string/touchscreen_gesture_settings_title">
         </activity>
 
-        <receiver android:name="com.dot.device.DeviceSettings.Startup" >
+        <receiver android:name="com.spark.device.DeviceSettings.Startup" >
             <intent-filter android:priority="100" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -96,7 +96,7 @@
 
         <!-- Quick Settings Tiles -->
         <service
-            android:name="com.dot.device.DeviceSettings.DCModeTileService"
+            android:name="com.spark.device.DeviceSettings.DCModeTileService"
             android:icon="@drawable/ic_dimming_off"
             android:label="@string/tile_dc_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -106,7 +106,7 @@
             </intent-filter>
         </service>
         <service
-            android:name="com.dot.device.DeviceSettings.HBMModeTileService"
+            android:name="com.spark.device.DeviceSettings.HBMModeTileService"
             android:icon="@drawable/ic_hbm_tile"
             android:label="@string/tile_hbm_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -116,7 +116,7 @@
             </intent-filter>
         </service>
 
-        <service android:name="com.dot.device.DeviceSettings.FPSInfoService"
+        <service android:name="com.spark.device.DeviceSettings.FPSInfoService"
                 android:exported="false">
         </service>
 
@@ -131,13 +131,13 @@
             </intent-filter>
         </service>
 
-        <service android:name="com.dot.device.DeviceSettings.HBMModeService"
+        <service android:name="com.spark.device.DeviceSettings.HBMModeService"
             android:exported="false" />
 
         <!-- Search indexing -->
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
-            android:authorities="com.dot.device"
+            android:authorities="com.spark.device"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"

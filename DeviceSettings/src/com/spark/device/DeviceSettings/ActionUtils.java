@@ -1,4 +1,4 @@
-package com.dot.device.DeviceSettings;
+package com.spark.device.DeviceSettings;
 
 import android.app.KeyguardManager;
 import android.content.Context;
