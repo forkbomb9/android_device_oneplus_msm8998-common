@@ -15,12 +15,12 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.dot.device.DeviceSettings.ModeSwitch;
+package com.spark.device.DeviceSettings.ModeSwitch;
 
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 
-import com.dot.device.DeviceSettings.Utils;
+import com.spark.device.DeviceSettings.Utils;
 
 public class SRGBModeSwitch implements OnPreferenceChangeListener {
 

@@ -15,12 +15,12 @@
  * limitations under the License.
  */
 
-package com.dot.device.DeviceSettings;
+package com.spark.device.DeviceSettings;
 
 public class Constants {
 
     // Broadcast action for settings update
-    static final String UPDATE_PREFS_ACTION = "com.dot.device.DeviceSettings.UPDATE_SETTINGS";
+    static final String UPDATE_PREFS_ACTION = "com.spark.device.DeviceSettings.UPDATE_SETTINGS";
 
     // Screen off Gesture actions
     static final int ACTION_FLASHLIGHT = 1;

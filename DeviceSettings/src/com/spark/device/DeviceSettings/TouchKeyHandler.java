@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.dot.device.DeviceSettings;
+package com.spark.device.DeviceSettings;
 
 import android.content.ActivityNotFoundException;
 import android.content.BroadcastReceiver;

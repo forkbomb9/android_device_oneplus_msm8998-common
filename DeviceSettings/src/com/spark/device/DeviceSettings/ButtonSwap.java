@@ -15,13 +15,19 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.dot.device.DeviceSettings.ModeSwitch;
+package com.spark.device.DeviceSettings;
 
-import com.dot.device.DeviceSettings.Utils;
+import android.content.Context;
+import android.content.SharedPreferences;
+import androidx.preference.Preference;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.PreferenceManager;
 
-public class HBMModeSwitch {
+import com.spark.device.DeviceSettings.DeviceSettings;
 
-    private static final String FILE = "/sys/devices/virtual/graphics/fb0/hbm";
+public class ButtonSwap implements OnPreferenceChangeListener {
+
+    private static final String FILE = "/proc/s1302/key_rep";
 
     public static String getFile() {
         if (Utils.fileWritable(FILE)) {
@@ -34,7 +40,14 @@ public class HBMModeSwitch {
         return Utils.fileWritable(getFile());
     }
 
-    public static boolean isCurrentlyEnabled() {
+    public static boolean isCurrentlyEnabled(Context context) {
         return Utils.getFileValueAsBoolean(getFile(), false);
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        Boolean enabled = (Boolean) newValue;
+        Utils.writeValue(getFile(), enabled ? "1" : "0");
+        return true;
     }
 }

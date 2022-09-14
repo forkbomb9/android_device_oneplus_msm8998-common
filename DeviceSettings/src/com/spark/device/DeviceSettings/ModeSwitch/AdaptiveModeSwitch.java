@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2017 The OmniROM Project
+* Copyright (C) 2018 The OmniROM Project
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -15,16 +15,16 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.dot.device.DeviceSettings.ModeSwitch;
+package com.spark.device.DeviceSettings.ModeSwitch;
 
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 
-import com.dot.device.DeviceSettings.Utils;
+import com.spark.device.DeviceSettings.Utils;
 
-public class NightModeSwitch implements OnPreferenceChangeListener {
+public class AdaptiveModeSwitch implements OnPreferenceChangeListener {
 
-    private static final String FILE = "/sys/devices/virtual/graphics/fb0/night_mode";
+    private static final String FILE = "/sys/devices/virtual/graphics/fb0/adaption_mode";
 
     public static String getFile() {
         if (Utils.fileWritable(FILE)) {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dot.device.DeviceSettings;
+package com.spark.device.DeviceSettings;
 
 import android.app.ActivityManager;
 import android.content.Intent;
@@ -22,7 +22,7 @@ import android.os.Handler;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 
-import com.dot.device.DeviceSettings.R;
+import com.spark.device.DeviceSettings.R;
 
 // TODO: Add FPS drawables
 public class FPSTileService extends TileService {
@@ -40,7 +40,7 @@ public class FPSTileService extends TileService {
               (ActivityManager) getSystemService(this.ACTIVITY_SERVICE);
       for (ActivityManager.RunningServiceInfo service :
               manager.getRunningServices(Integer.MAX_VALUE)) {
-          if (com.dot.device.DeviceSettings.FPSInfoService.class.getName().equals(
+          if (com.spark.device.DeviceSettings.FPSInfoService.class.getName().equals(
                   service.service.getClassName())) {
               isShowing = true;
           }
@@ -50,7 +50,7 @@ public class FPSTileService extends TileService {
 
   @Override
   public void onClick() {
-      Intent fpsinfo = new Intent(this, com.dot.device.DeviceSettings.FPSInfoService.class);
+      Intent fpsinfo = new Intent(this, com.spark.device.DeviceSettings.FPSInfoService.class);
       if (!isShowing)
           this.startService(fpsinfo);
       else
