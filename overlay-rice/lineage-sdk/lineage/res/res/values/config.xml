@@ -82,4 +82,7 @@
          OLED displays and can cause a bit of discoloration. Reinvestigate after tuning -->
     <bool name="config_defaultCABC">false</bool>
 
+    <!-- Wether to handle audio direction changes between major call states -->
+    <bool name="config_handleAudioDirectionChangesBetweenCallStateChanges"></bool>
+
 </resources>
