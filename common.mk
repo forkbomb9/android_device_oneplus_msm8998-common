@@ -25,7 +25,7 @@
 $(call inherit-product, vendor/oneplus/msm8998-common/msm8998-common-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 
-ifeq ($(WITH_GAPPS), true)
+ifeq ($(WITH_GMS), true)
     # Get non-open-source specific aspects for Ok Google
     $(call inherit-product, vendor/oneplus/google/google.mk)
 endif
@@ -462,14 +462,3 @@ TARGET_BUILD_GRAPHENEOS_CAMERA := true
 TARGET_ENABLE_BLUR := true
 TARGET_HAS_UDFPS := false
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-PRODUCT_PRODUCT_PROPERTIES += \
-    persist.sys.fw.bg_apps_limit?=48 \
-    persist.sys.fw.use_trim_settings?=true \
-    persist.sys.fw.empty_app_percent?=50 \
-    persist.sys.fw.trim_empty_percent?=100 \
-    persist.sys.fw.trim_cache_percent?=100 \
-    persist.sys.fw.trim_enable_memory?=2147483648 \
-    persist.sys.fw.bservice_age?=120000 \
-    persist.sys.fw.bservice_limit?=6 \
-    persist.sys.fw.bservice_enable?=true
