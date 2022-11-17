@@ -71,5 +71,4 @@ persist.sysui.disableBlur=false
 # Spark
 ro.spark.device.name=OnePlus 5/T
 ro.spark.group.url=https://t.me/theromfactory
-ro.spark.maintainer=Namkhai B.
-ro.spark.maintainer.username=forkbomb9
+ro.spark.maintainer=forkbomb9
